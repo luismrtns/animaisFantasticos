@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-br">
+<head class="js">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./dist/output.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Animais Fantásticos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .lista-animais::-webkit-scrollbar {
+            width: 15px;
+            height: 15px; /* Adicionado para scroll horizontal no mobile caso precise */
+        }
+
+        .lista-animais::-webkit-scrollbar-thumb {
+            background: #FB5;
+            border-radius: 10px;
+            border-left: 4px solid #faf6ed; /* Ajustado para a cor de fundo do site */
+            border-right: 4px solid #faf6ed;
+        }
+
+        .js .js-tabContent section{
+            display: none;
+        }
+
+        .js-tabContent section.ativo{
+            display: block; !important;
+            animation: show .5s forwards;
+        }
+
+        @keyframes show {
+            from {
+                opacity: 0;
+                transform: translate3d(-30px, 0, 0);
+            }
+            to{
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    </style>
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="bg-[#faf6ed] text-[#222] grid grid-cols-1 md:grid-cols-[1fr_120px_minmax(300px,800px)_1fr]">
+
+<nav class="md:col-start-3 md:col-end-5 mt-0 mb-4 md:mb-0 md:my-8 bg-[#FB5]">
+    <ul class="menu flex gap-4 md:gap-6 text-base md:text-lg p-2.5 flex-wrap justify-center md:justify-start font-[IBM_Plex_Mono] font-semibold uppercase">
+        <li><a class="block p-2.5" href="#animais">Animais</a></li>
+        <li><a class="block p-2.5" href="#faq">Faq</a></li>
+        <li><a class="block p-2.5" href="#contato">Contato</a></li>
+        <li><a class="block p-2.5" href="https://origamid.com.br">Dev</a></li>
+    </ul>
+</nav>
+
+<section id="animais" class="md:col-start-2 md:col-end-4 w-full px-4 md:p-2.5 grid grid-cols-1 md:grid-cols-[90px_300px_1fr] gap-5 mb-12 md:mb-0">
+    <h1 class="font-[Playfair_Display_SC] text-5xl md:text-8xl leading-none md:col-start-1 md:col-end-4 mb-4 md:mb-0 text-center md:text-left">Animais Fantásticos</h1>
+
+    <ul class="lista-animais js-tabMenu flex overflow-x-auto gap-4 md:gap-0 md:block md:h-120 md:overflow-y-scroll md:col-start-1 md:col-end-3 mb-6 md:mb-0 pb-4 md:pb-0">
+
+        <li class="zoom-container relative overflow-hidden cursor-pointer shrink-0 w-64 md:w-auto">
+            <img src="img/imagem1.jpg" alt="" class="zoom-img w-full object-cover origin-center transition-transform duration-300 ease-out rounded-md md:rounded-none">
+        </li>
+
+        <li class="zoom-container relative overflow-hidden cursor-pointer shrink-0 w-64 md:w-auto">
+            <img src="img/imagem2.jpg" alt="" class="zoom-img w-full object-cover origin-center transition-transform duration-300 ease-out rounded-md md:rounded-none">
+        </li>
+
+        <li class="zoom-container relative overflow-hidden cursor-pointer shrink-0 w-64 md:w-auto">
+            <img src="img/imagem3.jpg" alt="" class="zoom-img w-full object-cover origin-center transition-transform duration-300 ease-out rounded-md md:rounded-none">
+        </li>
+
+        <li class="zoom-container relative overflow-hidden cursor-pointer shrink-0 w-64 md:w-auto">
+            <img src="img/imagem4.jpg" alt="" class="zoom-img w-full object-cover origin-center transition-transform duration-300 ease-out rounded-md md:rounded-none">
+        </li>
+
+        <li class="zoom-container relative overflow-hidden cursor-pointer shrink-0 w-64 md:w-auto">
+            <img src="img/imagem5.jpg" alt="" class="zoom-img w-full object-cover origin-center transition-transform duration-300 ease-out rounded-md md:rounded-none">
+        </li>
+
+        <li class="zoom-container relative overflow-hidden cursor-pointer shrink-0 w-64 md:w-auto">
+            <img src="img/imagem6.jpg" alt="" class="zoom-img w-full object-cover origin-center transition-transform duration-300 ease-out rounded-md md:rounded-none">
+        </li>
+
+    </ul>
+
+    <div class="animais-descricao js-tabContent md:col-start-3">
+        <section class="mb-12">
+            <h2 class="font-[IBM_Plex_Mono] text-2xl uppercase mb-4 text-[#E54] tracking-widest font-semibold relative before:content-[''] before:inline-block ml-8 before:absolute before:top-3 before:-left-8 before:w-6 before:h-2 before:bg-[#FB5]">Raposa</h2>
+            <p class="font-[Helvetica] mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, eveniet excepturi magnam molestias natus nulla, quibusdam quidem soluta sunt voluptatum.</p>
+            <p class="font-[Helvetica] mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, quibusdam quidem soluta sunt voluptatum.</p>
+        </section>
+        <section class="mb-12">
+            <h2 class="font-[IBM_Plex_Mono] text-2xl uppercase mb-4 text-[#E54] tracking-widest font-semibold relative before:content-[''] before:inline-block ml-8 before:absolute before:top-3 before:-left-8 before:w-6 before:h-2 before:bg-[#FB5]">Esquilo</h2>
+            <p class="font-[Helvetica] mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, eveniet excepturi magnam molestias natus nulla, quibusdam quidem soluta sunt voluptatum.</p>
+            <p class="font-[Helvetica] mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, quibusdam quidem soluta sunt voluptatum.</p>
+        </section>
+        <section class="mb-12">
+            <h2 class="font-[IBM_Plex_Mono] text-2xl uppercase mb-4 text-[#E54] tracking-widest font-semibold relative before:content-[''] before:inline-block ml-8 before:absolute before:top-3 before:-left-8 before:w-6 before:h-2 before:bg-[#FB5]">Urso</h2>
+            <p class="font-[Helvetica] mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, eveniet excepturi magnam molestias natus nulla, quibusdam quidem soluta sunt voluptatum.</p>
+            <p class="font-[Helvetica] mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, quibusdam quidem soluta sunt voluptatum.</p>
+        </section>
+        <section class="mb-12">
+            <h2 class="font-[IBM_Plex_Mono] text-2xl uppercase mb-4 text-[#E54] tracking-widest font-semibold relative before:content-[''] before:inline-block ml-8 before:absolute before:top-3 before:-left-8 before:w-6 before:h-2 before:bg-[#FB5]">Lobo</h2>
+            <p class="font-[Helvetica] mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, eveniet excepturi magnam molestias natus nulla, quibusdam quidem soluta sunt voluptatum.</p>
+            <p class="font-[Helvetica] mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, quibusdam quidem soluta sunt voluptatum.</p>
+        </section>
+        <section class="mb-12">
+            <h2 class="font-[IBM_Plex_Mono] text-2xl uppercase mb-4 text-[#E54] tracking-widest font-semibold relative before:content-[''] before:inline-block ml-8 before:absolute before:top-3 before:-left-8 before:w-6 before:h-2 before:bg-[#FB5]">Macaco</h2>
+            <p class="font-[Helvetica] mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, eveniet excepturi magnam molestias natus nulla, quibusdam quidem soluta sunt voluptatum.</p>
+            <p class="font-[Helvetica] mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, quibusdam quidem soluta sunt voluptatum.</p>
+        </section>
+        <section class="mb-12">
+            <h2 class="font-[IBM_Plex_Mono] text-2xl uppercase mb-4 text-[#E54] tracking-widest font-semibold relative before:content-[''] before:inline-block ml-8 before:absolute before:top-3 before:-left-8 before:w-6 before:h-2 before:bg-[#FB5]">Leão</h2>
+            <p class="font-[Helvetica] mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, eveniet excepturi magnam molestias natus nulla, quibusdam quidem soluta sunt voluptatum.</p>
+            <p class="font-[Helvetica] mb-4">Lllllllorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, quibusdam quidem soluta sunt voluptatum.</p>
+        </section>
+    </div>
+</section>
+
+<section id="faq" class="faq md:col-start-2 md:col-end-4 w-full px-4 md:p-2.5 grid grid-cols-1 md:grid-cols-[90px_300px_1fr] gap-5 mb-12 md:mb-0">
+    <h1 class="font-[Playfair_Display_SC] text-5xl md:text-8xl leading-none md:col-start-1 md:col-end-4 text-center md:text-left">Faq</h1>
+    <dl class="js-accordion md:col-start-2 md:col-end-4">
+        <dt class="cursor-pointer font-[IBM_Plex_Mono] font-bold mt-8 mb-2 text-lg text-[#E54] relative before:content-[''] before:inline-block ml-8 before:absolute before:top-3 before:-left-8 before:w-6 before:transition-all before:h-2 before:bg-[#FB5] [&.ativo]:before:bg-[#E54] transition-all">Qual a idade dos animais?</dt>
+        <dd class="js max-h-0 opacity-0 [&.ativo]:block transition-all duration-500 ease-in-out [&.ativo]:max-h-125 [&.ativo]:opacity-100 [&.ativo]:mt-2 font-[Helvetica] ml-8">As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+
+        <dt class="cursor-pointer font-[IBM_Plex_Mono] font-bold mt-8 mb-2 text-lg text-[#E54] relative before:content-[''] before:inline-block ml-8 before:absolute before:top-3 before:-left-8 before:w-6 before:transition-all before:h-2 before:bg-[#FB5] [&.ativo]:before:bg-[#E54] transition-all">Eles são fantásticos?</dt>
+        <dd class="js max-h-0 opacity-0 [&.ativo]:block transition-all duration-500 ease-in-out [&.ativo]:max-h-125 [&.ativo]:opacity-100 [&.ativo]:mt-2 font-[Helvetica] ml-8">Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
+
+        <dt class="cursor-pointer font-[IBM_Plex_Mono] font-bold mt-8 mb-2 text-lg text-[#E54] relative before:content-[''] before:inline-block ml-8 before:absolute before:top-3 before:-left-8 before:w-6 before:transition-all before:h-2 before:bg-[#FB5] [&.ativo]:before:bg-[#E54] transition-all">Qual a diferença?</dt>
+        <dd class="js max-h-0 opacity-0 [&.ativo]:block transition-all duration-500 ease-in-out [&.ativo]:max-h-125 [&.ativo]:opacity-100 [&.ativo]:mt-2 font-[Helvetica] ml-8">As raposas são animais mamíferos e onívoros pertencentes à familia Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+    </dl>
+</section>
+
+<section id="contato" class="md:col-start-2 md:col-end-4 w-full px-4 md:p-2.5 grid grid-cols-1 md:grid-cols-[90px_300px_1fr] gap-5 mb-12 md:mb-0">
+    <h1 class="font-[Playfair_Display_SC] text-5xl md:text-8xl leading-none md:col-start-1 md:col-end-4 text-center md:text-left mb-6 md:mb-0">Contato</h1>
+    <div class="md:col-start-2">
+        <img src="img/mapa.png" alt="" class="w-full rounded-md md:rounded-none">
+    </div>
+    <ul class="md:col-start-3 mt-6 md:mt-0">
+        <li class="mb-4 font-[Helvetica] relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-6 before:h-2 before:bg-[#FB5]">contato@origamid.com</li>
+        <li class="mb-4 font-[Helvetica] relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-6 before:h-2 before:bg-[#FB5]">+55 85 9999-9856</li>
+        <li class="mb-4 font-[Helvetica] relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-6 before:h-2 before:bg-[#FB5]">Rua 1, nº77</li>
+        <li class="mb-4 font-[Helvetica] relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-6 before:h-2 before:bg-[#FB5]">Brejo Santo - CE</li>
+    </ul>
+</section>
+
+<footer class="copy md:col-start-3 md:col-end-5 p-4 font-[IBM_Plex_Mono] font-semibold bg-[#FB5] text-center md:text-left">Todos os direitos reservados.</footer>
+</body>
+</html>
