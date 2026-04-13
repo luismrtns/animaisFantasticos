@@ -90,14 +90,14 @@ const icon = document.getElementById('icon')
 if(localStorage.getItem('theme') === 'dark'){
     htmlElement.classList.toggle('dark')
     toggleCircle.classList.add('translate-x-6')
-    icon.textContent = '☀️'
+    icon.src = 'img/fox-face-icon.svg'
 }
 
 btnDark.addEventListener('click', () => {
     htmlElement.classList.toggle('dark')
     const isDark = htmlElement.classList.contains('dark')
     toggleCircle.classList.toggle('translate-x-6')
-    icon.textContent = isDark ? '🌙' : '☀️'
+    icon.src = isDark ? 'img/fox-face-icon.svg' : 'img/panda-face-color-icon.svg'
     localStorage.setItem('theme', isDark ? 'dark' : 'light')
 })
 

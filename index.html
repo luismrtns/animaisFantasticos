@@ -25,6 +25,11 @@
             border-right: 4px solid #faf6ed;
         }
 
+        html.dark .lista-animais::-webkit-scrollbar-thumb {
+            border-left-color: #121212;
+            border-right-color: #121212;
+        }
+
         .js .js-tabContent section{
             display: none;
         }
@@ -56,10 +61,10 @@
         <li><a class="block p-2.5" href="#contato">Contato</a></li>
         <li><a class="block p-2.5" href="https://origamid.com.br">Dev</a></li>
         <li>
-            <button id="btn-dark" class="relative w-14 h-8 flex items-center bg-gray-300 dark:bg-gray-700 rounded-full p-1 transition-colors duration-300">
+            <button id="btn-dark" class="relative transition-all duration-300 w-14 h-8 flex items-center bg-gray-300 dark:bg-[#333] rounded-full p-1">
                 <span id="toggle-circle" class="w-6 h-6 bg-white dark:bg-[#222] rounded-full shadow-md transform transition-transform duration-300 flex items-center justify-center text-xs">
                     <!-- ícone -->
-                    <span id="icon">🌙</span>
+                    <img id="icon" height="18px" width="18px" src="img/fox-face-icon.svg" alt="">
                 </span>
             </button>
         </li>
@@ -129,6 +134,119 @@
             <p class="font-[Helvetica] mb-4">Lllllllorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aspernatur aut blanditiis enim, error, quibusdam quidem soluta sunt voluptatum.</p>
         </section>
     </div>
+</section>
+
+<section class="md:col-start-2 md:col-end-4 w-full md:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 md:mb-0">
+    <h1 class="font-[Playfair_Display_SC] text-5xl md:text-8xl leading-none md:col-start-1 md:col-end-4 mb-4 md:mb-0 text-center md:text-left">Curiosidades</h1>
+<!--    Raposa-->
+    <div class="group relative w-80 md:w-64 cursor-pointer mx-auto max-w-sm">
+        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition">
+            <img class="w-full h-64 object-cover transition-transform duration-400 group-hover:-translate-y-10" src="img/raposa.jpg" alt="">
+            <div class="absolute inset-0 flex flex-col items-center justify-end pb-2 bg-linear-to-t from-black/70 to-transparent">
+                <h2 class="text-white text-xl font-semibold font-[IBM_Plex_Mono]">Raposa</h2>
+                <span class="text-white text-2xl mt-1 transition-transform duration-300 group-hover:-translate-y-1">↑</span>
+            </div>
+            <!--curiosidades-->
+            <div class="absolute text-[#faf5ed] bottom-0 left-0 w-full bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-b-xl translate-y-full group-hover:translate-y-0 transition duration-300">
+                <ul>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Extremamente inteligentes</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Animais noturnos</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Audição muito apurada</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--    Esquilo-->
+    <div class="group relative w-80 md:w-64 cursor-pointer mx-auto max-w-sm">
+        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition">
+            <img class="w-full h-64 object-cover transition-transform duration-400 group-hover:-translate-y-10" src="img/esquilo.jpg" alt="">
+            <div class="absolute inset-0 flex flex-col items-center justify-end pb-2 bg-linear-to-t from-black/70 to-transparent">
+                <h2 class="text-white text-xl font-semibold font-[IBM_Plex_Mono]">Esquilo</h2>
+                <span class="text-white text-2xl mt-1 transition-transform duration-300 group-hover:-translate-y-1">↑</span>
+            </div>
+            <!--curiosidades-->
+            <div class="absolute bottom-0 left-0 text-[#faf5ed] w-full bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-b-xl translate-y-full group-hover:translate-y-0 transition duration-300">
+                <ul>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Planta árvores sem querer</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Têm memória avançada</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Cauda ajuda equilíbrio</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--    Urso-->
+    <div class="group relative w-80 md:w-64 cursor-pointer mx-auto max-w-sm">
+        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition">
+            <img class="w-full h-64 object-cover transition-transform duration-400 group-hover:-translate-y-10" src="img/urso.jpg" alt="">
+            <div class="absolute inset-0 flex flex-col items-center justify-end pb-2 bg-linear-to-t from-black/70 to-transparent">
+                <h2 class="text-white text-xl font-semibold font-[IBM_Plex_Mono]">Urso</h2>
+                <span class="text-white text-2xl mt-1 transition-transform duration-300 group-hover:-translate-y-1">↑</span>
+            </div>
+            <!--curiosidades-->
+            <div class="absolute bottom-0 left-0 text-[#faf5ed] w-full bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-b-xl translate-y-full group-hover:translate-y-0 transition duration-300">
+                <ul>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Corre até 50km/h</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Olfato poderoso</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Hiberna por meses</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--    Lobo-->
+    <div class="group relative w-80 md:w-64 cursor-pointer mx-auto max-w-sm">
+        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition">
+            <img class="w-full h-64 object-cover transition-transform duration-400 group-hover:-translate-y-10" src="img/lobo.jpg" alt="">
+            <div class="absolute inset-0 flex flex-col items-center justify-end pb-2 bg-linear-to-t from-black/70 to-transparent">
+                <h2 class="text-white text-xl font-semibold font-[IBM_Plex_Mono]">Lobo</h2>
+                <span class="text-white text-2xl mt-1 transition-transform duration-300 group-hover:-translate-y-1">↑</span>
+            </div>
+            <!--curiosidades-->
+            <div class="absolute bottom-0 left-0 text-[#faf5ed] w-full bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-b-xl translate-y-full group-hover:translate-y-0 transition duration-300">
+                <ul>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Hierarquia bem definida</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Comunicação por uivos</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Lealdade ao grupo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--    Macaco-->
+    <div class="group relative w-80 md:w-64 cursor-pointer mx-auto max-w-sm">
+        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition">
+            <img class="w-full h-64 object-cover transition-transform duration-400 group-hover:-translate-y-10" src="img/macaco.jpg" alt="">
+            <div class="absolute inset-0 flex flex-col items-center justify-end pb-2 bg-linear-to-t from-black/70 to-transparent">
+                <h2 class="text-white text-xl font-semibold font-[IBM_Plex_Mono]">Macaco</h2>
+                <span class="text-white text-2xl mt-1 transition-transform duration-300 group-hover:-translate-y-1">↑</span>
+            </div>
+            <!--curiosidades-->
+            <div class="absolute bottom-0 left-0 text-[#faf5ed] w-full bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-b-xl translate-y-full group-hover:translate-y-0 transition duration-300">
+                <ul>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Usa ferramentas simples</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Vive em grupos sociais</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Aprende gestos básicos</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--    Leão-->
+    <div class="group relative w-80 md:w-64 cursor-pointer mx-auto max-w-sm">
+        <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition">
+            <img class="w-full h-64 object-cover transition-transform duration-400 group-hover:-translate-y-10" src="img/leao.jpg" alt="">
+            <div class="absolute inset-0 flex flex-col items-center justify-end pb-2 bg-linear-to-t from-black/70 to-transparent">
+                <h2 class="text-white text-xl font-semibold font-[IBM_Plex_Mono]">Leão</h2>
+                <span class="text-white text-2xl mt-1 transition-transform duration-300 group-hover:-translate-y-1">↑</span>
+            </div>
+            <!--curiosidades-->
+            <div class="absolute bottom-0 left-0 text-[#faf5ed] w-full bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-b-xl translate-y-full group-hover:translate-y-0 transition duration-300">
+                <ul>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Vive em grupos</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Fêmeas caçam mais</li>
+                    <li class="relative before:content-[''] before:inline-block ml-8 before:absolute before:top-2 before:-left-8 before:w-3 before:transition-all before:h-2 before:bg-[#FB5]">Rugido até 8 km</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 <section id="faq" class="faq md:col-start-2 md:col-end-4 w-full px-4 md:p-2.5 grid grid-cols-1 md:grid-cols-[90px_300px_1fr] gap-5 mb-12 md:mb-0">
