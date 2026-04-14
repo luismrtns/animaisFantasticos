@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br" class="dark">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -251,35 +251,59 @@
 </section>
 
 <!--galeria de fotos-->
-<section class="md:col-start-2 md:col-end-4 w-full p-4 md:p-12 flex flex-col gap-4 md:gap-8 mb-12 md:mb-0">
+<section class="md:col-start-2 md:col-end-4 w-full p-4 md:p-16 flex flex-col gap-4 md:gap-8 my-12 md:mb-0">
     <h1 class="font-[Playfair_Display_SC] text-5xl md:text-8xl leading-none md:col-start-1 md:col-end-4 mb-4 md:mb-0 text-center md:text-left">Galeria de fotos</h1>
 <!--    botões-->
-    <div class="flex gap-2 justify-center md:justify-start md:col-span-3">
-        <button class="btn-filtro font-[IBM_Plex_Mono] cursor-pointer px-4 py-2 bg-[#E54] text-[#faf6ed] transition-all duration-200 font-semibold" data-filtro="todos">Todos</button>
-        <button class="btn-filtro font-[IBM_Plex_Mono] cursor-pointer px-4 py-2 bg-[#FB5] hover:bg-[#E54] text-black hover:text-[#faf6ed] transition-all duration-200 hover:dark:text-[#faf6ed] font-semibold" data-filtro="canideo">Canídeos</button>
-        <button class="btn-filtro font-[IBM_Plex_Mono] cursor-pointer px-4 py-2 bg-[#FB5] hover:bg-[#E54] text-black hover:text-[#faf6ed] transition-all duration-200 hover:dark:text-[#faf6ed] font-semibold" data-filtro="felinos">Felinos</button>
-        <button class="btn-filtro font-[IBM_Plex_Mono] cursor-pointer px-4 py-2 bg-[#FB5] hover:bg-[#E54] text-black hover:text-[#faf6ed] transition-all duration-200 hover:dark:text-[#faf6ed] font-semibold" data-filtro="ursos">Ursos</button>
+    <div class="flex gap-2 justify-center px-4 md:justify-start md:col-span-3">
+        <button class="btn-filtro font-[IBM_Plex_Mono] text-sm md:text-md cursor-pointer px-4 py-2 bg-[#E54] text-[#faf6ed] transition-all duration-200 font-semibold" data-filtro="todos">Todos</button>
+        <button class="btn-filtro font-[IBM_Plex_Mono] text-sm md:text-md cursor-pointer px-4 py-2 bg-[#FB5] hover:bg-[#E54] text-black hover:text-[#faf6ed] transition-all duration-200 hover:dark:text-[#faf6ed] font-semibold" data-filtro="canideo">Canídeos</button>
+        <button class="btn-filtro font-[IBM_Plex_Mono] text-sm md:text-md cursor-pointer px-4 py-2 bg-[#FB5] hover:bg-[#E54] text-black hover:text-[#faf6ed] transition-all duration-200 hover:dark:text-[#faf6ed] font-semibold" data-filtro="felinos">Felinos</button>
+        <button class="btn-filtro font-[IBM_Plex_Mono] text-sm md:text-md cursor-pointer px-4 py-2 bg-[#FB5] hover:bg-[#E54] text-black hover:text-[#faf6ed] transition-all duration-200 hover:dark:text-[#faf6ed] font-semibold" data-filtro="ursos">Ursos</button>
     </div>
 
 <!--    imagens-->
-    <div class="grid grid-cols-2 md:grid-cols-3 md:col-span-3 gap-8 mb-12 md:mb-0">
-        <div class="item-animal" data-categoria="canideo">
-            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/raposa.jpg" alt="Raposa">
+    <div class="grid grid-cols-2 md:grid-cols-3 md:col-span-3 gap-4 mb-12 md:mb-0">
+        <div class="item-animal relative cursor-pointer hover:shadow-[6px_6px_0_rgba(0,0,0,1)] hover:dark:shadow-none transition duration-300" data-categoria="canideo">
+            <span class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#E54]"></span>
+            <span class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#E54]"></span>
+            <img class="w-full h-48 md:h-64 object-cover" src="img/raposa.jpg" alt="Raposa">
         </div>
-        <div class="item-animal" data-categoria="urso">
-            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/urso.jpg" alt="Urso">
+        <div class="item-animal relative cursor-pointer hover:shadow-[6px_6px_0_rgba(0,0,0,1)] hover:dark:shadow-none transition duration-300" data-categoria="urso">
+            <span class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#E54]"></span>
+            <span class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#E54]"></span>
+            <img class="w-full h-48 md:h-64 object-cover" src="img/urso.jpg" alt="Urso">
         </div>
-        <div class="item-animal" data-categoria="canideo">
-            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/esquilo.jpg" alt="Esquilo">
+        <div class="item-animal relative cursor-pointer hover:shadow-[6px_6px_0_rgba(0,0,0,1)] hover:dark:shadow-none transition duration-300" data-categoria="canideo">
+            <span class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#E54]"></span>
+            <span class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#E54]"></span>
+            <img class="w-full h-48 md:h-64 object-cover" src="img/esquilo.jpg" alt="Esquilo">
         </div>
-        <div class="item-animal" data-categoria="canideo">
-            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/lobo.jpg" alt="Lobo">
+        <div class="item-animal relative cursor-pointer hover:shadow-[6px_6px_0_rgba(0,0,0,1)] hover:dark:shadow-none transition duration-300" data-categoria="canideo">
+            <span class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#E54]"></span>
+            <span class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#E54]"></span>
+            <img class="w-full h-48 md:h-64 object-cover" src="img/lobo.jpg" alt="Lobo">
         </div>
-        <div class="item-animal" data-categoria="canideo">
-            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/leao.jpg" alt="Leão">
+        <div class="item-animal relative cursor-pointer hover:shadow-[6px_6px_0_rgba(0,0,0,1)] hover:dark:shadow-none transition duration-300" data-categoria="canideo">
+            <span class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#E54]"></span>
+            <span class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#E54]"></span>
+            <img class="w-full h-48 md:h-64 object-cover" src="img/leao.jpg" alt="Leão">
         </div>
-        <div class="item-animal" data-categoria="primata">
-            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/macaco.jpg" alt="Macaco">
+        <div class="item-animal relative cursor-pointer hover:shadow-[6px_6px_0_rgba(0,0,0,1)] hover:dark:shadow-none transition duration-300" data-categoria="primata">
+            <span class="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-[#FB5]"></span>
+            <span class="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-[#E54]"></span>
+            <span class="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#E54]"></span>
+            <img class="w-full h-48 md:h-64 object-cover" src="img/macaco.jpg" alt="Macaco">
         </div>
     </div>
 </section>
