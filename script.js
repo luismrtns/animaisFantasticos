@@ -134,6 +134,35 @@ function initGallery(){
     })
 }
 initGallery()
+
+function initImgFull(){
+    const itens = document.querySelectorAll('.item-animal')
+    const big = document.getElementById('big')
+    const bigImg = document.getElementById('big-img')
+
+    itens.forEach(item => {
+        item.addEventListener('click', () => {
+            const img = item.querySelector('img')
+            big.classList.remove('hidden')
+            big.classList.add('flex')
+            bigImg.src = img.src
+
+            bigImg.classList.add('scale-95', 'opacity-0')
+            bigImg.classList.remove('scale-100', 'opacity-100')
+            setTimeout(() => {
+                bigImg.classList.remove('scale-95', 'opacity-0')
+                bigImg.classList.add('scale-100', 'opacity-100')
+            }, 10)
+        })
+    })
+
+    big.addEventListener('click', () => {
+        big.classList.add('hidden')
+        big.classList.remove('flex')
+    })
+}
+
+initImgFull()
 // const transacao = [
 //     {
 //         descricao: 'taxa do pão',
