@@ -179,8 +179,9 @@ function initMenuMobile(){
         overlay.classList.add('hidden')
     })
 }
-
 initMenuMobile()
+
+
 // const transacao = [
 //     {
 //         descricao: 'taxa do pão',
