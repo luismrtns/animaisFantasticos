@@ -54,8 +54,12 @@
 </head>
 <body class="bg-[#faf6ed] text-[#222] dark:bg-[#121212] dark:text-[#faf6ed] transition-colors duration-300 grid grid-cols-1 md:grid-cols-[1fr_120px_minmax(300px,800px)_1fr]">
 
-<nav class="md:col-start-3 md:col-end-5 mt-0 mb-4 md:mb-0 md:my-8 bg-[#FB5] dark:text-[#222]">
-    <ul class="menu flex items-center gap-4 md:gap-6 text-base md:text-lg p-2.5 flex-wrap justify-center md:justify-start font-[IBM_Plex_Mono] font-semibold uppercase">
+<button id="btnMenu" class="md:hidden text-2xl p-2 z-50">
+    ☰
+</button>
+<div id="overlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden z-40"></div>
+<nav id="navMenu" class="md:col-start-3 md:col-end-5 mt-0 mb-4 md:mb-0 md:my-8 bg-[#FB5] dark:text-[#222] fixed md:static top-0 right-0 h-full md:h-auto w-40 md:w-auto transform translate-x-full md:translate-x-0 transition-all duration-300 z-50 shadow-lg md:shadow-none">
+    <ul class="menu flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 text-base md:text-lg p-6 md:p-2.5 flex-wrap justify-center md:justify-start font-[IBM_Plex_Mono] font-semibold uppercase">
         <li><a class="block p-2.5" href="#animais">Animais</a></li>
         <li><a class="block p-2.5" href="#faq">Faq</a></li>
         <li><a class="block p-2.5" href="#contato">Contato</a></li>

@@ -104,7 +104,7 @@ function initDarkMode(){
     })
 }
 initDarkMode()
-
+// galeria
 function initGallery(){
     const botaoFiltro = document.querySelectorAll('.btn-filtro')
     const itensGaleria = document.querySelectorAll('.item-animal')
@@ -134,7 +134,7 @@ function initGallery(){
     })
 }
 initGallery()
-
+// zoom imagens
 function initImgFull(){
     const itens = document.querySelectorAll('.item-animal')
     const big = document.getElementById('big')
@@ -161,8 +161,26 @@ function initImgFull(){
         big.classList.remove('flex')
     })
 }
-
 initImgFull()
+
+//menu lateral mobile
+function initMenuMobile(){
+    const btn = document.getElementById('btnMenu')
+    const menu = document.getElementById('navMenu')
+    const overlay = document.getElementById('overlay')
+
+    btn.addEventListener('click', () => {
+        menu.classList.remove('translate-x-full')
+        overlay.classList.remove('hidden')
+    })
+
+    overlay.addEventListener('click', () => {
+        menu.classList.add('translate-x-full')
+        overlay.classList.add('hidden')
+    })
+}
+
+initMenuMobile()
 // const transacao = [
 //     {
 //         descricao: 'taxa do pão',
