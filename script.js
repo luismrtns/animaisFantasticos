@@ -77,30 +77,63 @@ function initAccordion(){
 }
 initAccordion()
 
-const btnDark = document.getElementById('btn-dark')
-const htmlElement = document.documentElement
+// modo escuro
+function initDarkMode(){
+    const btnDark = document.getElementById('btn-dark')
+    const htmlElement = document.documentElement
 
-const temaSalvo = localStorage.getItem('theme')
-if(temaSalvo === 'dark'){
-    htmlElement.classList.add('dark')
+    const temaSalvo = localStorage.getItem('theme')
+    if(temaSalvo === 'dark'){
+        htmlElement.classList.add('dark')
+    }
+
+    const toggleCircle = document.getElementById('toggle-circle')
+    const icon = document.getElementById('icon')
+    if(localStorage.getItem('theme') === 'dark'){
+        htmlElement.classList.toggle('dark')
+        toggleCircle.classList.add('translate-x-6')
+        icon.src = 'img/fox-face-icon.svg'
+    }
+
+    btnDark.addEventListener('click', () => {
+        htmlElement.classList.toggle('dark')
+        const isDark = htmlElement.classList.contains('dark')
+        toggleCircle.classList.toggle('translate-x-6')
+        icon.src = isDark ? 'img/fox-face-icon.svg' : 'img/panda-face-color-icon.svg'
+        localStorage.setItem('theme', isDark ? 'dark' : 'light')
+    })
 }
+initDarkMode()
 
-const toggleCircle = document.getElementById('toggle-circle')
-const icon = document.getElementById('icon')
-if(localStorage.getItem('theme') === 'dark'){
-    htmlElement.classList.toggle('dark')
-    toggleCircle.classList.add('translate-x-6')
-    icon.src = 'img/fox-face-icon.svg'
+function initGallery(){
+    const botaoFiltro = document.querySelectorAll('.btn-filtro')
+    const itensGaleria = document.querySelectorAll('.item-animal')
+
+    botaoFiltro.forEach(botao => {
+        botao.addEventListener('click', (event) => {
+
+            botaoFiltro.forEach((btn) => {
+                btn.classList.remove('bg-[#E54]', 'text-[#faf6ed]')
+                btn.classList.add('bg-[#FB5]', 'text-black')
+            })
+            const btnClicado = event.currentTarget
+            btnClicado.classList.remove('bg-[#FB5]', 'text-black')
+            btnClicado.classList.add('bg-[#E54]', 'text-[#faf6ed]')
+
+            const filtroAtivo = btnClicado.getAttribute('data-filtro')
+            itensGaleria.forEach((foto) => {
+                const categoria = foto.getAttribute('data-categoria')
+
+                if(filtroAtivo === 'todos' || filtroAtivo === categoria){
+                    foto.classList.remove('hidden')
+                }else{
+                    foto.classList.add('hidden')
+                }
+            })
+        })
+    })
 }
-
-btnDark.addEventListener('click', () => {
-    htmlElement.classList.toggle('dark')
-    const isDark = htmlElement.classList.contains('dark')
-    toggleCircle.classList.toggle('translate-x-6')
-    icon.src = isDark ? 'img/fox-face-icon.svg' : 'img/panda-face-color-icon.svg'
-    localStorage.setItem('theme', isDark ? 'dark' : 'light')
-})
-
+initGallery()
 // const transacao = [
 //     {
 //         descricao: 'taxa do pão',

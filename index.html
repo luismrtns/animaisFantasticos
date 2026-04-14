@@ -136,9 +136,10 @@
     </div>
 </section>
 
+<!--curiosidades-->
 <section class="md:col-start-2 md:col-end-4 w-full md:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 md:mb-0">
     <h1 class="font-[Playfair_Display_SC] text-5xl md:text-8xl leading-none md:col-start-1 md:col-end-4 mb-4 md:mb-0 text-center md:text-left">Curiosidades</h1>
-<!--    Raposa-->
+<!--Raposa-->
     <div class="group relative w-80 md:w-64 cursor-pointer mx-auto max-w-sm">
         <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition">
             <img class="w-full h-64 object-cover transition-transform duration-400 group-hover:-translate-y-10" src="img/raposa.jpg" alt="">
@@ -249,6 +250,41 @@
 
 </section>
 
+<!--galeria de fotos-->
+<section class="md:col-start-2 md:col-end-4 w-full p-4 md:p-12 flex flex-col gap-4 md:gap-8 mb-12 md:mb-0">
+    <h1 class="font-[Playfair_Display_SC] text-5xl md:text-8xl leading-none md:col-start-1 md:col-end-4 mb-4 md:mb-0 text-center md:text-left">Galeria de fotos</h1>
+<!--    botões-->
+    <div class="flex gap-2 justify-center md:justify-start md:col-span-3">
+        <button class="btn-filtro font-[IBM_Plex_Mono] cursor-pointer px-4 py-2 bg-[#E54] text-[#faf6ed] transition-all duration-200 font-semibold" data-filtro="todos">Todos</button>
+        <button class="btn-filtro font-[IBM_Plex_Mono] cursor-pointer px-4 py-2 bg-[#FB5] hover:bg-[#E54] text-black hover:text-[#faf6ed] transition-all duration-200 hover:dark:text-[#faf6ed] font-semibold" data-filtro="canideo">Canídeos</button>
+        <button class="btn-filtro font-[IBM_Plex_Mono] cursor-pointer px-4 py-2 bg-[#FB5] hover:bg-[#E54] text-black hover:text-[#faf6ed] transition-all duration-200 hover:dark:text-[#faf6ed] font-semibold" data-filtro="felinos">Felinos</button>
+        <button class="btn-filtro font-[IBM_Plex_Mono] cursor-pointer px-4 py-2 bg-[#FB5] hover:bg-[#E54] text-black hover:text-[#faf6ed] transition-all duration-200 hover:dark:text-[#faf6ed] font-semibold" data-filtro="ursos">Ursos</button>
+    </div>
+
+<!--    imagens-->
+    <div class="grid grid-cols-2 md:grid-cols-3 md:col-span-3 gap-8 mb-12 md:mb-0">
+        <div class="item-animal" data-categoria="canideo">
+            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/raposa.jpg" alt="Raposa">
+        </div>
+        <div class="item-animal" data-categoria="urso">
+            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/urso.jpg" alt="Urso">
+        </div>
+        <div class="item-animal" data-categoria="canideo">
+            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/esquilo.jpg" alt="Esquilo">
+        </div>
+        <div class="item-animal" data-categoria="canideo">
+            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/lobo.jpg" alt="Lobo">
+        </div>
+        <div class="item-animal" data-categoria="canideo">
+            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/leao.jpg" alt="Leão">
+        </div>
+        <div class="item-animal" data-categoria="primata">
+            <img class="w-full h-48 md:h-64 object-cover rounded-lg" src="img/macaco.jpg" alt="Macaco">
+        </div>
+    </div>
+</section>
+
+<!--FAQ-->
 <section id="faq" class="faq md:col-start-2 md:col-end-4 w-full px-4 md:p-2.5 grid grid-cols-1 md:grid-cols-[90px_300px_1fr] gap-5 mb-12 md:mb-0">
     <h1 class="font-[Playfair_Display_SC] text-5xl md:text-8xl leading-none md:col-start-1 md:col-end-4 text-center md:text-left">Faq</h1>
     <dl class="js-accordion md:col-start-2 md:col-end-4">
@@ -263,6 +299,7 @@
     </dl>
 </section>
 
+<!--Contato-->
 <section id="contato" class="md:col-start-2 md:col-end-4 w-full px-4 md:p-2.5 grid grid-cols-1 md:grid-cols-[90px_300px_1fr] gap-5 mb-12 md:mb-0">
     <h1 class="font-[Playfair_Display_SC] text-5xl md:text-8xl leading-none md:col-start-1 md:col-end-4 text-center md:text-left mb-6 md:mb-0">Contato</h1>
     <div class="md:col-start-2">
