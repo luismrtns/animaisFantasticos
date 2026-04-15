@@ -294,7 +294,6 @@ function initCicloVida(){
 
     atualizarImg()
 }
-
 initCicloVida()
 // const transacao = [
 //     {
