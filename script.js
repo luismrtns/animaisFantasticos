@@ -181,7 +181,121 @@ function initMenuMobile(){
 }
 initMenuMobile()
 
+function initCicloVida(){
+    const animalImg = document.getElementById('animalEscolha')
+    const texto = document.querySelector('.ciclo-animal p')
 
+    const animais = document.querySelectorAll('[data-animal]')
+    const fases = document.querySelectorAll('[data-fase]')
+
+    let animalAtual = 'raposa'
+    let faseAtual = 'filhote'
+
+    const data = {
+        raposa: {
+            filhote: {
+                img: 'img/raposaFilho.jpg',
+                text: 'Filhotes de raposa são curiosos e passam boa parte do tempo explorando o ambiente ao redor. Dependem totalmente da mãe nos primeiros meses. Brincadeiras ajudam no desenvolvimento de habilidades de caça. Vivem escondidos em tocas para proteção. Aprendem rápido observando os adultos.'
+            },
+            adulto: {
+                img: 'img/raposa.jpg',
+                text: 'Raposas adultas são ágeis, inteligentes e excelentes caçadoras. Possuem hábitos geralmente solitários e noturnos. Alimentam-se de pequenos animais, frutas e insetos. São muito adaptáveis a diferentes ambientes. Usam astúcia para sobreviver.'
+            }
+        },
+        macaco: {
+            filhote: {
+                img: 'img/macacoFilho.jpg',
+                text: 'Filhotes de macaco vivem agarrados à mãe e aprendem por imitação. São muito brincalhões e sociáveis. Desenvolvem habilidades motoras ao interagir com o grupo. Dependem da proteção dos adultos. O aprendizado social é essencial nessa fase.'
+            },
+            adulto: {
+                img: 'img/macaco.jpg',
+                text: 'Macacos adultos vivem em grupos organizados e complexos. Possuem comunicação avançada e forte interação social. Alimentam-se de frutas, folhas e pequenos animais. Demonstram comportamentos cooperativos. Cada indivíduo tem um papel no grupo.'
+            }
+        },
+        leao: {
+            filhote: {
+                img: 'img/leaoFilho.jpg',
+                text: 'Filhotes de leão são ativos e passam muito tempo brincando entre si. Essas brincadeiras simulam situações de caça. Dependem das fêmeas do grupo para alimentação e proteção. Permanecem próximos da alcateia. Aprendem hierarquia desde cedo.'
+            },
+            adulto: {
+                img: 'img/leao.jpg',
+                text: 'Leões adultos vivem em grupos chamados alcateias. As fêmeas caçam enquanto os machos defendem o território. São predadores fortes e estratégicos. Trabalham em equipe para capturar presas. Demonstram comportamento social estruturado.'
+            }
+        },
+        gato: {
+            filhote: {
+                img: 'img/gatoFilho.jpg',
+                text: 'Gatinhos são extremamente curiosos e cheios de energia. Brincam constantemente para desenvolver coordenação e reflexos. Dependem da mãe nas primeiras semanas. Gostam de explorar pequenos espaços. Aprendem hábitos rapidamente.'
+            },
+            adulto: {
+                img: 'img/gato.jpg',
+                text: 'Gatos adultos são independentes e territoriais. Possuem excelente agilidade e instinto de caça. Costumam ser mais tranquilos, mas ainda brincalhões. Adaptam-se bem a ambientes domésticos. Demonstram comportamento seletivo com humanos.'
+            }
+        },
+        cachorro: {
+            filhote: {
+                img: 'img/cachorroFilho.jpg',
+                text: 'Filhotes de cachorro são sociáveis, brincalhões e cheios de energia. Estão em fase de aprendizado constante. Precisam de atenção, cuidado e treinamento básico. Criam vínculos fortes com humanos. Exploradores por natureza.'
+            },
+            adulto: {
+                img: 'img/cachorro.jpg',
+                text: 'Cães adultos são leais, protetores e companheiros. Desenvolvem personalidade conforme a criação. Podem ser treinados para diversas funções. Gostam de rotina e interação. Demonstram forte ligação emocional com seus donos.'
+            }
+        }
+    }
+
+    function atualizarImg(){
+        const info = data[animalAtual][faseAtual]
+        animalImg.classList.add('opacity-0', 'scale-95')
+        texto.classList.add('opacity-0', 'translate-y-2')
+        setTimeout(() => {
+            animalImg.src = info.img
+            texto.textContent = info.text
+
+            animalImg.classList.remove('opacity-0', 'opacity-95')
+            texto.classList.remove('opacity-0', 'translate-y-2')
+        }, 250)
+    }
+
+    animais.forEach((animal) => {
+        animal.addEventListener('click', () => {
+            animais.forEach(a => {
+                a.classList.remove('bg-[#111]', 'shadow-[3px_3px_0_rgba(0,0,0,1)]')
+                a.classList.add('bg-[#222]')
+            })
+            animal.classList.remove('bg-[#222]')
+            animal.classList.add('bg-[#111]', 'shadow-[3px_3px_0_rgba(0,0,0,1)]')
+
+            animalAtual = animal.dataset.animal
+            atualizarImg()
+        })
+    })
+
+    fases.forEach(fase => {
+        fase.addEventListener('click', () => {
+            fases.forEach(f => {
+                f.classList.remove('bg-[#E54]', 'text-[#faf6ed]', 'shadow-[3px_3px_0_rgba(0,0,0,1)]')
+                f.classList.add('bg-[#FB5]', 'text-black')
+            })
+            fase.classList.remove('bg-[#FB5]', 'text-black')
+            fase.classList.add('bg-[#E54]', 'text-[#faf6ed]', 'shadow-[3px_3px_0_rgba(0,0,0,1)]')
+            faseAtual = fase.dataset.fase
+            atualizarImg()
+        })
+    })
+
+    animais[0].classList.remove('bg-[#222]')
+    animais[0].classList.add('bg-[#111]', 'shadow-[3px_3px_0_rgba(0,0,0,1)]')
+    fases[0].classList.add(
+        'bg-[#E54]',
+        'text-[#faf6ed]',
+        'shadow-[3px_3px_0_rgba(0,0,0,1)]'
+    )
+
+    atualizarImg()
+}
+
+initCicloVida()
 // const transacao = [
 //     {
 //         descricao: 'taxa do pão',
